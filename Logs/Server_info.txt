@@ -1,0 +1,30 @@
+
+Time 0:37:45
+[ Server Opened ]
+
+Time 0:38:15
+[ Server Closed ]
+
+Time 0:40:9
+[ Server Opened ]
+
+Time 0:40:40
+[ Server Closed ]
+
+Time 0:42:50
+[ Server Opened ]
+
+Time 0:43:21
+[ Server Closed ]
+
+Time 0:45:35
+[ Server Opened ]
+
+Time 0:46:5
+[ Server Closed ]
+
+Time 0:47:12
+[ Server Opened ]
+
+Time 0:47:42
+[ Server Closed ]

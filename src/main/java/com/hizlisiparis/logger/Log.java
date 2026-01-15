@@ -1,4 +1,4 @@
-package com.logger;
+package com.hizlisiparis.logger;
 
 import java.io.*;
 import java.time.*;
@@ -19,8 +19,8 @@ public class Log {
             
             LocalTime now = LocalTime.now();
             
-            String timestamp = "Time " + now.getHour() + ":" + now.getMinute() + ":" + now.getSecond();
-            
+            String timestamp = "Time " + now.getHour() + ":" + now.getMinute() + ":" + now.getSecond() + ":" + (now.getNano()/1000);
+
             bw.newLine();
             bw.write(timestamp);
             bw.newLine();
@@ -33,6 +33,7 @@ public class Log {
             
         } catch (Exception e) {
             error("Log", e.toString(), e.getMessage());
+            e.printStackTrace();
         }
     }
     
@@ -49,11 +50,12 @@ public class Log {
             
             LocalTime now = LocalTime.now();
             String timestamp = "Time " + now.getHour() + ":" + now.getMinute() + ":" + now.getSecond();
+            info = "[ " + info + " ]";
             
             bw.newLine();
             bw.write(timestamp);
             bw.newLine();
-            bw.write(info)
+            bw.write(info);
             bw.newLine();
             
             bw.close();
