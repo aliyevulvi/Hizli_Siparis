@@ -64,4 +64,21 @@ public class Log {
             error("Log", e.toString(), e.getMessage());
         }
     }
+    
+    public static void main(String[] args) {
+        try {
+            File dataDir = new File("Data");
+            File[] dirFiles = dataDir.listFiles();
+            
+            BufferedWriter bw;
+            for (File file : dirFiles) {
+                bw = new BufferedWriter(new FileWriter(file));
+                bw.write("");
+                bw.close();
+            }
+            
+        } catch (Exception e) {
+            error("Log", e.toString(), e.getMessage());
+        }
+    }
 }

@@ -14,7 +14,7 @@ public class Packet {
 	public static Packet getPacket(byte[] packetBytes) {
 		try {
 			Gson gson = new Gson();
-			String packetStr = new String(packetBytes, "UTF-8");
+			String packetStr = new String(packetBytes);
 			Packet packet = gson.fromJson(packetStr, Packet.class);
 
 			return packet;
@@ -33,7 +33,7 @@ public class Packet {
 			this.timestamp = now.getHour() + ":" + now.getMinute() + ":" + now.getSecond();
 			this.payload.add(oneline);
 		} catch (Exception e) {
-			Log.error("Client", e.toString(), e.getMessage());
+			Log.error("Packet", e.toString(), e.getMessage());
 		}
 	}
 	
@@ -44,7 +44,7 @@ public class Packet {
 			LocalTime now = LocalTime.now();
 			this.timestamp = now.getHour() + ":" + now.getMinute() + ":" + now.getSecond();
 		} catch (Exception e) {
-			Log.error("Client", e.toString(), e.getMessage());
+			Log.error("Packet", e.toString(), e.getMessage());
 		}
 	}
 

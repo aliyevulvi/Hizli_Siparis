@@ -1,27 +1,72 @@
 
-Time 0:37:57
+Time 13:48:42
+[ ----------------------------------- ]
+
+Time 13:48:42
 [ Client Connected to Server ]
 
-Time 0:38:2
+Time 13:48:42
 [ Client Disconnected from Server ]
 
-Time 0:40:28
+Time 13:48:42
+[ ----------------------------------- ]
+
+Time 15:6:7
+[ ----------------------------------- ]
+
+Time 15:6:7
 [ Client Connected to Server ]
 
-Time 0:40:31
+Time 15:6:7
+[ Get Menu Request Sent ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ One Product Received ]
+
+Time 15:6:7
+[ All Products Received ]
+
+Time 15:6:7
 [ Client Disconnected from Server ]
 
-Time 0:42:54
+Time 15:6:7
+[ ----------------------------------- ]
+
+Time 15:8:54
+[ ----------------------------------- ]
+
+Time 15:8:54
 [ Client Connected to Server ]
 
-Time 0:45:48
-[ Client Connected to Server ]
-
-Time 0:45:52
+Time 15:8:55
 [ Client Disconnected from Server ]
 
-Time 0:47:15
-[ Client Connected to Server ]
-
-Time 0:47:21
-[ Client Disconnected from Server ]
+Time 15:8:55
+[ ----------------------------------- ]

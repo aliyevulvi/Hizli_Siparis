@@ -3,8 +3,11 @@ package com.hizlisiparis.server;
 import com.hizlisiparis.logger.*;
 import java.net.*;
 import java.io.*;
+import java.util.*;
 import com.hizlisiparis.protocol.*;
 import com.hizlisiparis.database.*;
+import com.hizlisiparis.product.*;
+import com.google.gson.Gson;
 
 public class ClientService extends Thread {
 	private Socket socket;
@@ -40,6 +43,10 @@ public class ClientService extends Thread {
 			case "LOGIN":
 				clientLogin(packet);
 				break;
+		    case "GET_MENU": sendMenu();
+		        break;
+		    case "MENU_VERSION": sendLastMod();
+		        break;
 			case "EXIT":
 				exitClient();
 				break;
@@ -60,6 +67,29 @@ public class ClientService extends Thread {
 		} catch (Exception e) {
 			Log.error("ClientService", e.toString(), e.getMessage());
 		}
+	}
+	
+	public void sendMenu() {
+	    try {
+	        ArrayList<Product> products = DB.getProducts();
+	        Gson gson = new Gson();
+	        for (Product product : products) {
+	            ProtocolHandler.sendPacket(dataWriter, new Packet("MENU_RES", "1.0", gson.toJson(product)));
+	            Log.info("ClientService", "One Product Sent");
+	        }
+	        ProtocolHandler.sendPacket(dataWriter, new Packet("DONE", "1.0"));
+	        Log.info("ClientService", "All Products Sent");
+	    } catch (Exception e) {
+	        Log.error("ClientService", e.toString(), e.getMessage());
+	    }
+	}
+	
+	public void sendLastMod() {
+	    try {
+	        ProtocolHandler.sendPacket(dataWriter, new Packet("MENU_LAST_MOD", "1.0", DB.getLastMod()));
+	    } catch (Exception e) {
+	        Log.error("ClientService", e.toString(), e.getMessage());
+	    }
 	}
 
 	public void exitClient() {

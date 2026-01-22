@@ -1,8 +1,4 @@
 
-Time 0:46:15:482457
-java.net.ConnectException: Connection refused
-Connection refused
-
-Time 0:46:38:585276
-java.net.ConnectException: Connection refused
-Connection refused
+Time 13:48:42:649207
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+Index 0 out of bounds for length 0

@@ -1,6 +1,7 @@
 /storage/emulated/0/DCIM/hizlisiparis/src/main/java/com/hizlisiparis/client/Client.java
 /storage/emulated/0/DCIM/hizlisiparis/src/main/java/com/hizlisiparis/database/DB.java
 /storage/emulated/0/DCIM/hizlisiparis/src/main/java/com/hizlisiparis/logger/Log.java
+/storage/emulated/0/DCIM/hizlisiparis/src/main/java/com/hizlisiparis/product/Product.java
 /storage/emulated/0/DCIM/hizlisiparis/src/main/java/com/hizlisiparis/protocol/Packet.java
 /storage/emulated/0/DCIM/hizlisiparis/src/main/java/com/hizlisiparis/protocol/ProtocolHandler.java
 /storage/emulated/0/DCIM/hizlisiparis/src/main/java/com/hizlisiparis/server/ClientService.java

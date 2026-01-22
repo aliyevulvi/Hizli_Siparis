@@ -1,4 +1,5 @@
 com/hizlisiparis/protocol/Packet.class
+com/hizlisiparis/product/Product.class
 com/hizlisiparis/server/Server.class
 com/hizlisiparis/client/Client.class
 com/hizlisiparis/database/DB.class

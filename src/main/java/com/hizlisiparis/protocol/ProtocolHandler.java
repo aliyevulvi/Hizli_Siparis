@@ -7,7 +7,8 @@ public class ProtocolHandler {
     public static void sendPacket(DataOutputStream dos, Packet packet) {
         try {
             dos.writeInt(packet.getJsonStr().length());
-            dos.write(packet.getJsonStr().getBytes());
+            //dos.write(packet.getJsonStr().getBytes());
+            dos.writeUTF(packet.getJsonStr());
             dos.flush();
         } catch (Exception e) {
             Log.error("ProtocolHandler", e.toString(), e.getMessage());
@@ -18,9 +19,10 @@ public class ProtocolHandler {
         try {
             int packetLength = dis.readInt();
             byte[] packetBytes = new byte[packetLength];
-            dis.readFully(packetBytes);
+            //dis.readFully(packetBytes);
+            String packetStr = dis.readUTF();
             
-            return Packet.getPacket(packetBytes);
+            return Packet.getPacket(packetStr.getBytes());
             
         } catch (Exception e) {
            Log.error("ProtocolHandler", e.toString(), e.getMessage());

@@ -15,8 +15,9 @@ public class Server {
 
 	public static void startServer() {
 		try {
-			ServerSocket serverSocket = new ServerSocket(5000);
+			ServerSocket serverSocket = new ServerSocket(5001);
 			serverSocket.setSoTimeout(1000);
+			serverSocket.setReuseAddress(true);
 			Log.info("Server", "Server Opened");
 
 			while (connectedUsers.size() > 0 || LocalTime.now().isBefore(closeTime)) {
